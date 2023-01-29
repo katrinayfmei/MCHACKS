@@ -13,9 +13,9 @@
 
     <div class="header">
       <img src="transparent copy.png">
-        <h1>Header</h1>
+      <h1>One More Byte</h1>
 
-      </div>
+    </div>
     
       <div class="navbar">
         <a class="active" href="index.html">Home</a>
@@ -24,23 +24,61 @@
         <a href="social.html">Social</a>
         <a href="login.html">Login</a>
       </div>
+      <h2>What is happening at One More Byte Community!</h2>
 
       <br>
 
       <div class="grid">
-        <img id="myImg" src="radish1.png" alt="Snow">
+     
 
-        
-        <img src="radish2.jpeg">
-        <img src="radish3.png">
-        <img src="food_waste.jpeg">
-        <img src="/pix/samples/25m.jpg" alt="Sample photo">
-        <img src="/pix/samples/16l.jpg" alt="Sample photo">
+        <img src="radish1.png" style="width:450px;height:450px">
+        <img src="radish2.jpeg"style="width:450px;height:450px">
+        <!-- Trigger the Modal -->
+<img id="myImg" src="radish3.png"  style="width:450px;height:450px">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" src="ss2.png">
+</div>
+        <img src="radish6.jpeg"style="width:450px;height:450px">
+        <img src="radish7.jpeg"style="width:450px;height:450px">
+        <img src="radish8.jpeg"style="width:450px;height:450px">
       </div>
+<br>
+      <footer>
+        <img src="transparent copy.png" style="width:30px;height:30px;">
+        <p>One More Byte</p>
+      </footer>
 
-
-
+      <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+          modal.style.display = "block";
+          //  modalImg.src = this.src; <- Remove this line!
+          captionText.innerHTML = this.alt;
+        }
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        </script>
 </body>
+
 
 
 </html>
