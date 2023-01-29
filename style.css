@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto:wght@300;400;900&display=swap');
+.header {
+    padding: 60px;
+    text-align: center;
+    background:white;
+    color: black;
+    font-size: 30px;
+
+  }
+body{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+ /* Add a black background color to the top navigation */
+ .navbar {
+    background-color: #CCCCCC;
+    overflow: hidden;
+   width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Style the links inside the navigation bar */
+  .navbar a {
+    
+    float: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+  } 
+
+  /*Social Page*/
+  .grid { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    align-items: stretch;
+    justify-items: center;
+    }
+  .grid img {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    max-width: 100%;
+  }
+  @keyframes growProgressBar {
+    0%, 33% { --pgPercentage: 0; }
+    100% { --pgPercentage: var(--value); }
+  }
+  
+  @property --pgPercentage {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+  }
+  
+  div[role="progressbar"] {
+    --size: 12rem;
+    --fg: #369;
+    --bg: #def;
+    --pgPercentage: var(--value);
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+      radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+      ;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+  }
+  
+  div[role="progressbar"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+  }
+  
+
+
+
+
+  #progress
+{
+  width: 100px;
+	height: 100px;
+	background: blue;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+  float:left;
+  margin:5px;
+}
+.count
+{
+  line-height: 100px;
+  color:white;
+  margin-left:30px;
+  font-size:25px;
+}
+
+.linker
+{
+  font-size : 20px;
+
+}
+
